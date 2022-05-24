@@ -1,0 +1,12 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Facultades {% endblock %}
+
+{%  block content %}
+<h1>Facultades</h1>
+    <ul>
+        {% for e in listaFacultades %}
+            <li style="color:white">{{ e }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

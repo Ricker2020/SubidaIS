@@ -1,0 +1,13 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+<h1 class="text-center">Estudiantes por Busqueda</h1>
+<form method="get" >{% csrf_token %}
+    <input type="int" id="id" name="id" placeholder="Id estudiante:">
+    <a href="{% url 'detailEst' pk=name %}"><button type="submit" class="button"> Buscar</button><a>
+</form>
+
+
+{% endblock %}
+

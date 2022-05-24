@@ -1,0 +1,18 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+{% load static %}
+<link href="{% static 'css/confirmar.css' %}" type="text/css" rel="stylesheet">
+<script src="{% static 'js/proceso.js' %}"></script>
+
+<h1 class="text-center"> Procesar Estudiante </h1>
+<b>
+<div class="text-center" style="color: rgb(209, 123, 10)">
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="boton_personalizado" onclick="notificacion()">Confirmar</button>
+</form>
+</div>
+</b>
+{% endblock %}

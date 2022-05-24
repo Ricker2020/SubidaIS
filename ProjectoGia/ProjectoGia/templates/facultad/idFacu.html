@@ -1,0 +1,16 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+
+
+<h1 class="text-center"> Actualizar Facultad </h1>
+<b>
+<form method="get">{% csrf_token %}
+    <input type="int" id="id" name="id" placeholder="id Facultad:">
+    <button type="submit">Actualizar</button>
+</form>
+
+<h1>{{ pk }}   </h1>
+<ul><li><a class="nav-link" href="{% url 'updateFacu' pk='{{ pk }}' %}">Añadir Estudiante</a></li></ul>
+{% endblock %}

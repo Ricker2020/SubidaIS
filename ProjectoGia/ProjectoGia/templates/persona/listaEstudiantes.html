@@ -1,0 +1,39 @@
+
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+
+<style>
+    .miTable{
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    td {border-style: solid;
+        border-color: #cccccc;
+        border-width: 1px;}
+    
+</style>
+
+<h1>Estudiantes</h1>
+
+
+<table border="1" class="miTable;" style="margin: 0 auto;">
+    <tr style="color: rgb(209, 123, 10)">
+        <th>Nombre   </th>
+        <th>Facultad   </th>
+        <th>Tipo   </th>
+        <th>Habilidad   </th>
+
+    </tr>
+    {% for e in listaEstudiantes %}
+        <tr style="color: white;">
+            <td>{{ e.primernombre }} {{ e.apellido }}   </td>
+            <td>{{ e.facultad }}   </td>
+            <td>{{ e.tipos }}   </td>
+            <td>{{ e.hability }}   </td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+
+
+{% if object_list %}
+    <h1>Estudiantes en la Facultad de {{ object_list.0.facultad }}</h1>
+{% endif %}
+<div>
+
+
+    {% for e in object_list %}
+        <ul><li><a class="nav-link" href="{% url 'detailEst' pk=e.pk %}" style="color: orange;">{{ e }} </a></li></ul>
+    {% endfor %}
+
+</div>
+{% endblock %}

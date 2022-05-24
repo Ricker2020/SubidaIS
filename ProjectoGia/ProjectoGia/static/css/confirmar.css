@@ -1,0 +1,17 @@
+.boton_personalizado{
+    text-decoration: none;
+padding: 3px;
+padding-left: 10px;
+padding-right: 10px;
+font-weight: 900;
+font-size: 17px;
+font-style: helvetica;
+color: white;
+background-color: rgb(29, 28, 28);
+border-radius: 15px;
+border: 3px double #be610a;
+}
+.boton_personalizado:hover{
+  color: rgb(29, 28, 28);
+  background-color: #be610a;
+}

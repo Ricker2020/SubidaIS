@@ -1,0 +1,20 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+
+
+{% if object_list %}
+    <h1>Estudiantes en la Facultad de {{ object_list.0.facultad }}</h1>
+{% endif %}
+<ul>
+
+    {% for e in object_list %}
+        <li style="color: white;">
+            {{ e.primernombre }} {{ e.apellido }} 
+            
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

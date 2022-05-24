@@ -1,0 +1,23 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+<div class="container">
+    <h1 class="text-center">Opciones Facultades</h1>
+</div>
+
+<div>
+    <ul><li><a class="nav-link" href="{% url 'listaFacultades' %}">Lista de Facultades</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFaculEst' %}">Lista de Estudiantes por Facultad</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFacuBusqueda' %}">Busqueda de Facultades</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFacuActiva' %}">Facultad Activa</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'EstFacu4List' %}">Detalle de Facultad</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'crearFacu' %}">Añadir Facultad</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'EstFacu2List' %}">Actualizar Facultad</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'EstFacu3List' %}">Eliminar Facultad</a></li></ul>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+{% load static %}
+<link href="{% static 'css/confirmar.css' %}" type="text/css" rel="stylesheet">
+
+<h1 class="text-center">Facultad por Busqueda</h1>
+<form method="get">{% csrf_token %}
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre de corto de Facultad:">
+    <button type="submit" class="boton_personalizado">Buscar</button>
+</form>
+
+<h3>Resultados de la Búsqueda</h3>
+<ul>
+    {% for e in facultades %}
+        <li style="color: white;">
+            Facultad de {{ e }}
+        </li>
+    {% endfor %}
+
+</ul>
+
+
+
+
+
+{% endblock %}

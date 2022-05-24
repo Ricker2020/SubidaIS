@@ -1,0 +1,18 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+{% load static %}
+<link href="{% static 'css/confirmar.css' %}" type="text/css" rel="stylesheet">
+<script src="{% static 'js/delete.js' %}"></script>
+
+<h1 class="text-center"> Facultad ha Eliminar</h1>
+
+<div class="text-center" style="color: rgb(209, 123, 10)">
+<form method="post"> {% csrf_token %}
+    <h2>¿Seguro que quieres eliminar?</h2>
+    <button type="submit" class="boton_personalizado" onclick="notificacionDeleteFacultad()">Confirmar</button>
+</form>
+</div>
+
+{% endblock %}

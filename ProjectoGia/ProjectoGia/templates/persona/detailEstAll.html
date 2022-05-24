@@ -1,0 +1,35 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+<style>
+    .miTable{
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    td {border-style: solid;
+        border-color: #cccccc;
+        border-width: 1px;}
+    
+</style>
+
+<h1 class="text-center">Detalle Estudiante </h1>
+
+<h2>{{ titulo }}</h2>
+
+    <h2 style="color: rgb(209, 123, 10)">INFORMACIÓN</h2>
+    <p >
+        {% for e in base %}
+        <li style="color: white;">
+            {{ e }}
+        </li>
+           
+        {% endfor %}
+    </p>
+    <table border="1" class="miTable;" style="background-color: white;">
+        <tr>
+          <td>{{ object.carta|safe }}</td>
+        </tr>
+      </table>
+
+{% endblock %}

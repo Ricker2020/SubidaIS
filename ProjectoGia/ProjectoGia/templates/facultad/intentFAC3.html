@@ -1,0 +1,19 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+{% load static %}
+<link href="{% static 'css/botones.css' %}" type="text/css" rel="stylesheet">
+
+<ul>
+    {% for e in listaFacultades %}
+        <li>
+            <a href="{% url 'deleteFacu' pk=e.pk %}">
+                <button class="boton_personalizado"> Facultad {{ e.nombreCorto }}</button>
+            </a>
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% endblock %}

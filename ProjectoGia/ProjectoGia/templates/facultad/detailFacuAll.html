@@ -1,0 +1,34 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+<style>
+    .miTable{
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    td {border-style: solid;
+        border-color: #cccccc;
+        border-width: 1px;}
+    
+</style>
+
+<h1 class="text-center">Detalle Facultad </h1>
+<form method="get">{% csrf_token %}
+    <input type="int" id="id" name="id" placeholder="id Facultad:">
+    <button type="submit">Buscar</button>
+</form>
+
+<h2>{{ titulo }}</h2>
+
+    <h2 style="color: rgb(209, 123, 10)">INFORMACIÓN</h2>
+    <p >
+        {% for e in base %}
+        <li style="color: white;">
+           Facultad de {{ e }}  
+        </li>
+           
+        {% endfor %}
+    </p>
+
+{% endblock %}

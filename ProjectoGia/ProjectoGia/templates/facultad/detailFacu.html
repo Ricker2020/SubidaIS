@@ -1,0 +1,33 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+<style>
+    .miTable{
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    td {border-style: solid;
+        border-color: #cccccc;
+        border-width: 1px;}
+    
+</style>
+
+<h1 class="text-center">Detalle Facultad </h1>
+
+
+<h2>{{ titulo }}</h2>
+
+    <p>
+    {{ object }}
+    </p>
+    <h2 style="color: rgb(209, 123, 10)">INFORMACIÓN</h2>
+    <p style="color: white;">
+        {{ object }} 
+        <br>
+        {{ object.Activa }}
+
+        <br>
+    </p>
+
+{% endblock %}

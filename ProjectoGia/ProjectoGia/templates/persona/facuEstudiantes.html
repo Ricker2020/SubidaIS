@@ -1,0 +1,25 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+<ul>
+    <br>
+    <li>
+        <a href="{% url 'listEstFacu' facultad='FIS' %}">
+            <button class="button"> Estudiantes FIS</button>
+        </a>
+    </li>
+    <br>
+    <li>
+        <a href="{% url 'listEstFacu' facultad='FC' %}">
+            <button class="button"> Estudiantes FC</button>
+        </a>
+    </li>
+    <br>
+    <li>
+        <a href="{% url 'listEstFacu' facultad='FIQA' %}">
+            <button class="button"> Estudiantes FIQA</button>
+        </a>
+    </li>
+</ul>
+{% endblock %}

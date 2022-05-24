@@ -1,0 +1,18 @@
+{%  extends "home/base.html" %}
+{%  block title  %}  Opciones Facultad {% endblock %}
+
+{%  block content %}
+
+
+<h1 class="text-center"> Actualizar Facultad </h1>
+<b>
+
+
+<div class="text-center" style="color: rgb(209, 123, 10)">
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear Facultad</button>
+</form>
+</div>
+</b>
+{% endblock %}

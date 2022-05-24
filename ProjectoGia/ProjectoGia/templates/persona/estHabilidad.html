@@ -1,0 +1,31 @@
+
+
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+{% load static %}
+<link href="{% static 'css/confirmar.css' %}" type="text/css" rel="stylesheet">
+
+<h1 class="text-center"> Habilidades del Estudiante</h1>
+<form method="get" >{% csrf_token %}
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre estudiante:">
+    <button type="submit" class="boton_personalizado">Buscar</button>
+</form>
+
+
+
+<h3>Resultados de la Búsqueda</h3>
+<h2 style="color: rgb(209, 123, 10)">INFORMACIÓN DEL ESTUDIANTE</h2>
+<ul>
+    
+    {% for h in habilidades %}
+    <b>{{ h.primernombre}} {{ h.apellido}}</b>
+        <li style="color: white;">
+            {{ h.hability }}
+        </li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{%  extends "home/base.html" %}
+{%  block title  %} Opciones Estudiantes {% endblock %}
+
+{%  block content %}
+<div class="container">
+    <h1 class="text-center">Opciones Estudiantes</h1>
+</div>
+
+<div>
+    <ul><li><a class="nav-link" href="{% url 'listaEstudiantes' %}">Lista de Estudiantes</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFaculEst' %}">Lista de Estudiantes por Facultad</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listEstBusqueda' %}">Busqueda de Estudiantes</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listEstHabilidad' %}">Habilidades del Estudiante</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFaculEst4' %}">Detalle por Estudiante</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'crearEst' %}">Añadir Estudiante</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFaculEst2' %}">Actualizar Estudiante</a></li></ul>
+    <ul><li><a class="nav-link" href="{% url 'listFaculEst3' %}">Eliminar Estudiante</a></li></ul>
+
+</div>
+
+
+
+{% endblock %}
